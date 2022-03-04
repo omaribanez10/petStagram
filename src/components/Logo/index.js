@@ -1,7 +1,7 @@
 import * as React from "react"
-
+import { Svg } from "./styles";
 export const Logo = (props) => (
-  <svg
+  <Svg
     width={502.569}
     height={160.4}
     xmlns="http://www.w3.org/2000/svg"
@@ -47,5 +47,5 @@ export const Logo = (props) => (
         transform="translate(72.5 105.315)"
       />
     </g>
-  </svg>
+  </Svg>
 )

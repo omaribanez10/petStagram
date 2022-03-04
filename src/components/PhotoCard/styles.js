@@ -1,4 +1,21 @@
-import styled from 'styled-components'
+import styled, {css, keyframes} from 'styled-components'
+
+
+
+const fadeInKeyframes = keyframes`
+    from{
+        filter:blur(5px);
+        opacity:0;
+    }
+    to{
+        filter:blur(0)
+        opacity(1);
+    }
+`
+
+const fadeIn = ({time='1s', type='ease'} = {}) =>{
+    css`animation: ${time} ${fadeInKeyframes} ${type};`
+}
 
 export const ImgWrapper = styled.div`
     border-radius:2%;
@@ -12,6 +29,7 @@ export const ImgWrapper = styled.div`
 `
 
 export const Img = styled.img`
+    ${fadeIn()}
     box-shadow: 0 10px 14px rgba(0,0,0, .2);
     height:100%;
     object-fit:cover;
